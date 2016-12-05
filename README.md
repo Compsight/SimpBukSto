@@ -17,10 +17,13 @@ Creating this web application will provide exposure to:
 - [ ] Books entered in the system are listed on the home page, in pages of 10
 - [ ] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
 - [ ] Users can view book details on a book detail page, linked to from the listing or search pages
+
 ## Stretch Goal
 - [ ] Create a checkbox to favorite a book and display it on a favorite books page
+
 ### Required
 - [x] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
+
 ## Quality Rubric
 - Code is well formatted without any linting errors
 - Variables, functions, css classes, etc. are meaningfully named (no comments exist in code to explain functionality - the names serve that function)
