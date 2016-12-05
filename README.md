@@ -30,10 +30,10 @@ Creating this web application will provide exposure to:
 - Functions are small and serve a single purpose
 - Code is well organized into a meaningful file structure
 - Interface is user friendly
+
 ## Resources
 
-Model -
-## http://ondras.zarovi.cz/sql/demo/
+Schema/Model: http://ondras.zarovi.cz/sql/demo/
 
 <!-- LICENSE -->
 
