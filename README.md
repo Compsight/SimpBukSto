@@ -17,7 +17,8 @@ Creating this web application will provide exposure to:
 - [ ] Books entered in the system are listed on the home page, in pages of 10
 - [ ] Users can search for books by title OR by author OR by genre, and search results will be presented in a new page
 - [ ] Users can view book details on a book detail page, linked to from the listing or search pages
-- [ ] All code submissions are peer reviewed via GitHub PR by at least two members of the team, and master is always in a stable state (tests passed, site functions)
+## Stretch Goal
+- [ ] Create a checkbox to favorite a book and display it on a favorite books page
 ### Required
 - [x] The artifact produced is properly licensed, preferably with the [MIT license](https://opensource.org/licenses/MIT).
 ## Quality Rubric
@@ -25,7 +26,6 @@ Creating this web application will provide exposure to:
 - Variables, functions, css classes, etc. are meaningfully named (no comments exist in code to explain functionality - the names serve that function)
 - Functions are small and serve a single purpose
 - Code is well organized into a meaningful file structure
-- Code is reasonably tested with a test suite
 - Interface is user friendly
 ## Resources
 
