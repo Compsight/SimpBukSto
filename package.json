@@ -1,0 +1,19 @@
+{
+  "name": "simplebookstore",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compsight/SimpleBookStore.git"
+  },
+  "author": "Maurice Caivness & RC Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Compsight/SimpleBookStore/issues"
+  },
+  "homepage": "https://github.com/Compsight/SimpleBookStore#readme"
+}
