@@ -1,9 +1,76 @@
 @import reset
 
+clr-grey = hsl(0, 0%, 85%)
+clr-grey-light = hsl(0, 0%, 95.1%)
+clr-grey-dark = darken(clr-grey, 30)
+border-style = .25rem solid clr-grey-light
+border-template(x)
+  if x is 1
+    border border-style
+    border-radius 3px
+  else if x is 2
+    border-bottom border-style
+
+
 @font-face
   font-family "noelanscript"
   src url("../fonts/noelanscript.otf") format("opentype")
 
+html
+  font-size 14px
+
 .logo
   font-family "noelanscript"
-  font-size 2em
+  font-size 3em
+  text-align center
+  color hsl(357, 85, 65)
+
+
+.gcli
+  border none
+  outline none
+  background-color hsl(0, 0%, 85.1%)
+  border-template(2)
+  width 100%
+  margin 13vh 0 16vh
+  font-size 3rem
+  &::-webkit-input-placeholder
+    color clr-grey-dark
+    font-size 2rem
+    text-align center
+    font-weight 100
+
+body
+  font-family monospace, sans-serif
+  background-color clr-grey
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  display flex
+  justify-content center
+  align-items flex-start
+  main
+    margin 25vh 0 0 0
+
+aside.help
+  padding 8px 12px 10px
+  border-template(1)
+  > ul > li
+    display flex
+    justify-content space-between
+    margin 3vh 0
+    > p
+      a
+        background-color clr-grey-light
+        padding 4px 6px 5px
+        border-radius 5px
+        text-decoration none
+        color clr-grey-dark
+
+footer.help
+  position fixed
+  bottom 0
+  right 0
+  padding 0 5vw 2.5vh 0

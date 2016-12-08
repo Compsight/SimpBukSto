@@ -1,16 +1,14 @@
 extends layout
 
 block content
-  h1.logo SimpBukSto
-  input
-  aside
-    ul
-      li
-        p: a(href="#") search for books
-        p [general keywords] [@author] [_title] [#category]
-      li
-        p create a new book
-        p <a href="#">:new</a> @author _title #category
-      //- for command in commands
-      //-   li
-      //-     a
+  main
+    h1.logo SimpBukSto
+    input.gcli(autofocus placeholder="enter command here")
+    aside.help
+      ul
+        li
+          p: a(href="#") search for books
+          p [general keywords] [@author] [_title] [#category]
+        li
+          p create a new book
+          p <a href="#">:new</a> @author _title #category

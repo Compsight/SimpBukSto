@@ -125,7 +125,65 @@ table {
   font-family: "noelanscript";
   src: url("../fonts/noelanscript.otf") format("opentype");
 }
+html {
+  font-size: 14px;
+}
 .logo {
   font-family: "noelanscript";
-  font-size: 2em;
+  font-size: 3em;
+  text-align: center;
+  color: #f25a61;
+}
+.gcli {
+  border: none;
+  outline: none;
+  background-color: #d9d9d9;
+  border-bottom: 0.25rem solid #f3f3f3;
+  width: 100%;
+  margin: 13vh 0 16vh;
+  font-size: 3rem;
+}
+.gcli::-webkit-input-placeholder {
+  color: #8c8c8c;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 100;
+}
+body {
+  font-family: monospace, sans-serif;
+  background-color: #d9d9d9;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main {
+  margin: 25vh 0 0 0;
+}
+aside.help {
+  padding: 8px 12px 10px;
+  border: 0.25rem solid #f3f3f3;
+  border-radius: 3px;
+}
+aside.help > ul > li {
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh 0;
+}
+aside.help > ul > li > p a {
+  background-color: #f3f3f3;
+  padding: 4px 6px 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #8c8c8c;
+}
+footer.help {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0 5vw 2.5vh 0;
 }
