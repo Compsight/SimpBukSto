@@ -30,7 +30,5 @@
     "serve-favicon": "~2.3.0",
     "stylus": "0.54.5"
   },
-  "devDependencies": {
-    "nodemon": "^1.11.0"
-  }
+  "devDependencies": {}
 }

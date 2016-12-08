@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.logo SimpBukSto
+  input
+  aside
+    ul
+      li
+        p: a(href="#") search for books
+        p [general keywords] [@author] [_title] [#category]
+      li
+        p create a new book
+        p <a href="#">:new</a> @author _title #category
+      //- for command in commands
+      //-   li
+      //-     a
