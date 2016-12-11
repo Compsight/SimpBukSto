@@ -8,9 +8,18 @@ class Book {
 
 class Librarian {
   addBook ( book ) {
-
+    console.log( book )
+    let req = new Request( 'api/v1/book', {
+      method: 'POST'
+     ,headers: new Headers({ 'Content-Type': 'application/json'})
+     ,body: JSON.stringify( book )
+    })
+    fetch( req )
+      .then( res => res.json )
+      .then( data => data )
+      .catch( error => console.log( 'Request failed', error ) )
   }
-  getBook ( bookID ) {
+  getBook ( bookId ) {
 
   }
   findBooks ( parameters ) {
@@ -35,8 +44,7 @@ cli.addEventListener('keydown', function (event) {
 
 cliForm.addEventListener( 'submit', event => {
   event.preventDefault()
-  console.log( event.srcElement.elements.cli.value )
-  parseUserCommand( 
+  parseAndFetch( cli.value )
 } )
 
 window.addEventListener('keydown', function (event) {
@@ -46,49 +54,51 @@ window.addEventListener('keydown', function (event) {
   }
 })
 
-function parseUserCommand ( commandString ) {
+function parseAndFetch ( commandString ) {
   let
-    command    { value:  '', regex: /^\s*:((?:add)|(?:update)|(?:remove))/ig }
-    general    { value:  '', regex: /^([^@_#]*)\b/ig }
-    title      { value:  '', regex: /\_\s*([^#|@|_]*)\b/ig }
-    authors    { value:  [], regex: /@\s*([^#|@|_]*)\b/ig }
-    categories { value:  [], regex: /#\s*([^#|@|_]*)\b/ig }
-    }
+    command    = [ '', /^\s*:((?:add)|(?:update)|(?:remove))/ig ]
+   ,general    = [ '', /^([^@_#]*)\b/ig ]
+   ,title      = [ '', /_\s*([^#|@|_]*)\b/ig ]
+   ,authors    = [ [], /@\s*([^#|@|_]*)\b/ig ]
+   ,categories = [ [], /#\s*([^#|@|_]*)\b/ig ]
    ,match
   
-  while ((match = command.regex.exec(commandString))) {
-    command.value = match[1].toLowerCase()
+  while ((match = command[1].exec(commandString))) {
+    command[0] = match[1].toLowerCase()
   }
   
-  if ( command.value === '' ) { command.value = 'search' }
-  
-  while ((match = general.value.exec(commandString))) {
-    general.value = match[1].toLowerCase()
+  while ((match = general[1].exec(commandString))) {
+    general[0] = match[1].toLowerCase()
   }
   
-  general.value = general.value.split(' ')
+  general[0] = general[0].split(' ')
   
-  while ((match = title.regex.exec(commandString))) {
-    title.value = match[1].toLowerCase()
+  while ((match = title[1].exec(commandString))) {
+    title[0] = match[1].toLowerCase()
   }
   
-  while ((match = author.regex.exec(commandString))) {
-    authors.value.push(match[1].toLowerCase())
+  while ((match = authors[1].exec(commandString))) {
+    authors[0].push(match[1].toLowerCase())
   }
   
-  while ((match = category.regex.exec(commandString))) {
-    categories.value.push(match[1].toLowerCase())
+  while ((match = categories[1].exec(commandString))) {
+    categories[0].push(match[1].toLowerCase())
   }
   
-  switch ( command.value ) {
+  switch ( command[0] ) {
     case 'add':
-      dewey.addBook(  )
+      let book = new Book (
+        authors[0]
+       ,categories[0]
+       ,title[0]
+      )
+      dewey.addBook( book )
       break;
     case 'update':
-      dewey.updateBook(  )
+      dewey.updateBook( bookId, book )
       break;
     case 'remove':
-      dewey.removeBook(  )
+      dewey.removeBook( bookId )
       break;
     default:
       dewey.findBooks(  )
