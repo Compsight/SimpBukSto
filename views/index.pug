@@ -3,7 +3,7 @@ extends layout
 block content
   main
     h1.logo SimpBukSto
-    input.gcli(autofocus placeholder="enter command here")
+    form.cli: input(type="text" name="cli" autofocus placeholder=":new _Title of Book @Author1 #category1 #category2 @Author2")
     aside.help
       ul
         li

@@ -17,7 +17,11 @@ border-template(x)
   src url("../fonts/noelanscript.otf") format("opentype")
 
 html
-  font-size 14px
+  box-sizing border-box
+  font-size 2vmin
+
+*, *::before, *::after
+  box-sizing inherit
 
 body
   font-family monospace, sans-serif
@@ -32,26 +36,27 @@ body
   align-items flex-start
   main
     margin 25vh 0 0 0
+    width 100%
 
 .logo
   font-family "noelanscript"
   font-size 3em
-  text-align center
   color hsl(357, 85, 65)
+  padding 0 0 0 21vw
 
-.gcli
+.cli
   border none
   outline none
-  background-color hsl(0, 0%, 85.1%)
-  border-template(2)
-  width 100%
-  margin 13vh 0 16vh
+  background-color clr-grey-light
+  margin 5vh 0 16vh
   font-size 3rem
+  width 100vw
+  padding 0 0 0 20vw
   &::-webkit-input-placeholder
     color clr-grey-dark
     font-size 2rem
-    text-align center
     font-weight 100
+    padding 0 0 0 1vw
 
 aside.help
   padding 8px 12px 10px

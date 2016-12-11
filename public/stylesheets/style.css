@@ -126,7 +126,13 @@ table {
   src: url("../fonts/noelanscript.otf") format("opentype");
 }
 html {
-  font-size: 14px;
+  box-sizing: border-box;
+  font-size: 2vmin;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 body {
   font-family: monospace, sans-serif;
@@ -142,27 +148,28 @@ body {
 }
 body main {
   margin: 25vh 0 0 0;
+  width: 100%;
 }
 .logo {
   font-family: "noelanscript";
   font-size: 3em;
-  text-align: center;
   color: #f25a61;
+  padding: 0 0 0 21vw;
 }
-.gcli {
+.cli {
   border: none;
   outline: none;
-  background-color: #d9d9d9;
-  border-bottom: 0.25rem solid #f3f3f3;
-  width: 100%;
-  margin: 13vh 0 16vh;
+  background-color: #f3f3f3;
+  margin: 5vh 0 16vh;
   font-size: 3rem;
+  width: 100vw;
+  padding: 0 0 0 20vw;
 }
-.gcli::-webkit-input-placeholder {
+.cli::-webkit-input-placeholder {
   color: #8c8c8c;
   font-size: 2rem;
-  text-align: center;
   font-weight: 100;
+  padding: 0 0 0 1vw;
 }
 aside.help {
   padding: 8px 12px 10px;
